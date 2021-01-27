@@ -7,10 +7,10 @@
 
   <Targets>
     <Target>
-      <TargetName>Target 1</TargetName>
+      <TargetName>freq_sweep_rx_tx</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060183::V5.06 update 2 (build 183)::ARMCC</pCCUsed>
+      <pCCUsed>5060750::V5.06 update 6 (build 750)::.\ARMCC</pCCUsed>
       <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -48,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
-          <OutputName>code</OutputName>
+          <OutputDirectory>.\Objects\</OutputDirectory>
+          <OutputName>freq_sweep_rx_tx</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
-          <CreateHexFile>0</CreateHexFile>
-          <DebugInformation>0</DebugInformation>
+          <CreateHexFile>1</CreateHexFile>
+          <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -82,8 +82,8 @@
           <AfterMake>
             <RunUserProg1>1</RunUserProg1>
             <RunUserProg2>1</RunUserProg2>
-            <UserProg1Name>fromelf --bin code.axf -o code.bin</UserProg1Name>
-            <UserProg2Name>fromelf -cvf code.axf -o disasm.txt</UserProg2Name>
+            <UserProg1Name>fromelf --bin .\Objects\freq_sweep_rx_tx.axf -o .\Objects\freq_sweep_rx_tx.bin</UserProg1Name>
+            <UserProg2Name>fromelf -cvf .\Objects\freq_sweep_rx_tx.axf -o .\Objects\disasm.txt</UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
             <nStopA1X>0</nStopA1X>
@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>../../;..\freq_sweep_rx_tx</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -352,7 +352,7 @@
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
             <useXO>0</useXO>
-            <ClangAsOpt>1</ClangAsOpt>
+            <ClangAsOpt>4</ClangAsOpt>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -370,7 +370,7 @@
             <TextAddressRange>0x00000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>code.sct</ScatterFile>
+            <ScatterFile>freq_sweep_rx_tx.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -381,77 +381,201 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Source Group 1</GroupName>
+          <GroupName>app</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>2</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath>..\freq_sweep_rx_tx</IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
+          <Files>
+            <File>
+              <FileName>freq_sweep_rx_tx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\freq_sweep_rx_tx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>drv</GroupName>
           <Files>
             <File>
               <FileName>cm0dsasm.s</FileName>
               <FileType>2</FileType>
-              <FilePath>cm0dsasm.s</FilePath>
-            </File>
-            <File>
-              <FileName>Int_Handlers.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>Int_Handlers.h</FilePath>
-            </File>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>main.c</FilePath>
+              <FilePath>..\..\cm0dsasm.s</FilePath>
             </File>
             <File>
               <FileName>Memory_Map.h</FileName>
               <FileType>5</FileType>
-              <FilePath>Memory_Map.h</FilePath>
+              <FilePath>..\..\Memory_Map.h</FilePath>
             </File>
             <File>
               <FileName>retarget.c</FileName>
               <FileType>1</FileType>
-              <FilePath>retarget.c</FilePath>
+              <FilePath>..\..\retarget.c</FilePath>
             </File>
             <File>
-              <FileName>rf_global_vars.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>rf_global_vars.h</FilePath>
-            </File>
-            <File>
-              <FileName>scm3B_hardware_interface.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\scm3B_hardware_interface.h</FilePath>
-            </File>
-            <File>
-              <FileName>scm3B_hardware_interface.c</FileName>
+              <FileName>optical.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\scm3B_hardware_interface.c</FilePath>
+              <FilePath>..\..\optical.c</FilePath>
             </File>
             <File>
-              <FileName>scm3_hardware_interface.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\scm3_hardware_interface.c</FilePath>
-            </File>
-            <File>
-              <FileName>scm3_hardware_interface.h</FileName>
+              <FileName>optical.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\scm3_hardware_interface.h</FilePath>
+              <FilePath>..\..\optical.h</FilePath>
             </File>
             <File>
-              <FileName>bucket_o_functions.c</FileName>
+              <FileName>radio.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\bucket_o_functions.c</FilePath>
+              <FilePath>..\..\radio.c</FilePath>
             </File>
             <File>
-              <FileName>bucket_o_functions.h</FileName>
+              <FileName>radio.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\bucket_o_functions.h</FilePath>
+              <FilePath>..\..\radio.h</FilePath>
             </File>
             <File>
-              <FileName>scum_radio_bsp.c</FileName>
+              <FileName>adc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\scum_radio_bsp.c</FilePath>
+              <FilePath>..\..\adc.c</FilePath>
             </File>
             <File>
-              <FileName>scum_radio_bsp.h</FileName>
+              <FileName>adc.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\scum_radio_bsp.h</FilePath>
+              <FilePath>..\..\adc.h</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\uart.h</FilePath>
+            </File>
+            <File>
+              <FileName>rftimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\rftimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>rftimer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\rftimer.h</FilePath>
+            </File>
+            <File>
+              <FileName>scum_defs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\scum_defs.h</FilePath>
+            </File>
+            <File>
+              <FileName>scm3c_hw_interface.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\scm3c_hw_interface.h</FilePath>
+            </File>
+            <File>
+              <FileName>scm3c_hw_interface.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\scm3c_hw_interface.c</FilePath>
+            </File>
+            <File>
+              <FileName>zappy2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\zappy2.c</FilePath>
+            </File>
+            <File>
+              <FileName>zappy2.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\zappy2.h</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\temperature.c</FilePath>
+            </File>
+            <File>
+              <FileName>temperature.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\temperature.h</FilePath>
+            </File>
+            <File>
+              <FileName>fixed-point.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\fixed-point.h</FilePath>
             </File>
           </Files>
         </Group>
