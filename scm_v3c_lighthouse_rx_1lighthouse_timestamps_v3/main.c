@@ -205,6 +205,10 @@ int main(void) {
 	// Number of data points to gather before printing
 	target_num_data_points = 120;
 	
+	while (1) {
+		printf("idling");
+	}
+	
 		
 	// Loop forever looking for pulses
 	// If this gets interrupted every once in awhile by an ISR, it should still work (untested)
@@ -223,6 +227,7 @@ int main(void) {
 		
 		// Detect rising edge
 		if(last_gpio == 0 && current_gpio == 1){
+			printf("rising edge!");
 						
 			// Reset RF Timer count register at rising edge of first sync pulse
 			//if(state == 0) RFTIMER_REG__COUNTER = 0x0;
@@ -234,6 +239,7 @@ int main(void) {
 				
 		// Detect falling edge
 		else if(last_gpio == 1 && current_gpio == 0){
+			printf("falling edge!");
 			
 			// Save when this event happened
 			timestamp_fall = RFTIMER_REG__COUNTER;
