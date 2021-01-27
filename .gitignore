@@ -3,11 +3,27 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Data
+*/*/data/
+
 # C extensions
 *.so
 *.crf
 *.o
+*.d
 
+# Keil intermediary files
+*.axf
+*.build_log.htm
+*.htm
+*.lnp
+*.map
+*.sct
+*.dep
+*.lst
+disasm.txt
+*.Bak
+*.uvguix*
 
 # Distribution / packaging
 .Python
