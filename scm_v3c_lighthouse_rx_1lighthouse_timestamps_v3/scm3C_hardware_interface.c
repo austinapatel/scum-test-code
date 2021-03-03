@@ -1134,14 +1134,14 @@ void initialize_mote(){
 	set_asc_bit(553);
 	
 	// HF_CLOCK will be trimmed to 20MHz, so set RFTimer div value to 40 to get 500kHz (inverted, so 1101 0111)
-	//set_asc_bit(49);
-	//set_asc_bit(48);
-	//clear_asc_bit(47);
-	//set_asc_bit(46);
-	//clear_asc_bit(45);
-	//set_asc_bit(44);
-	//set_asc_bit(43);
-	//set_asc_bit(42);
+	set_asc_bit(49);
+	set_asc_bit(48);
+	clear_asc_bit(47);
+	set_asc_bit(46);
+	clear_asc_bit(45);
+	set_asc_bit(44);
+	set_asc_bit(43);
+	set_asc_bit(42);
 	
 	// HF_CLOCK will be trimmed to 20MHz, so set RFTimer div value to 4 to get 5MHz (inverted, so 1111 1011)
 	//set_asc_bit(49);
@@ -1154,14 +1154,14 @@ void initialize_mote(){
 	//set_asc_bit(42);
 
 	// Set HCLK divider to 2
-	clear_asc_bit(57);
-	clear_asc_bit(56);
-	clear_asc_bit(55);	
-	clear_asc_bit(54);
-	clear_asc_bit(53);
-	set_asc_bit(52);//inverted	
-	set_asc_bit(51);
-	clear_asc_bit(50);
+//	clear_asc_bit(57);
+//	clear_asc_bit(56);
+//	clear_asc_bit(55);	
+//	clear_asc_bit(54);
+//	clear_asc_bit(53);
+//	set_asc_bit(52);//inverted	
+//	set_asc_bit(51);
+//	clear_asc_bit(50);
 
 	// Set HCLK divider to pass through so that HCLK is 20 MHz
 	//set_asc_bit(37);

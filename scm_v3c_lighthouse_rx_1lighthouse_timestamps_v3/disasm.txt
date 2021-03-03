@@ -2334,18 +2334,18 @@
         0x00002368:    fb39f000    ..9.    BLX      0xe7e372 ; 0xe7e372
         0x0000236c:    38ad4852    RH.8    STMCC    sp!,{r1,r4,r6,r11,lr}
         0x00002370:    fb35f000    ..5.    BLX      0xd7e37a ; 0xd7e37a
-        0x00002374:    f0002039    9 ..    DCI      0xf0002039 ; ? Undefined
-        0x00002378:    2038fb43    C.8     EORSCS   pc,r8,r3,ASR #22
-        0x0000237c:    fb40f000    ..@.    BLX      0x103e386 ; 0x103e386
-        0x00002380:    f0002037    7 ..    DCI      0xf0002037 ; ? Undefined
-        0x00002384:    2036fb3d    =.6     EORSCS   pc,r6,sp,LSR r11 ; ?  
-        0x00002388:    fb3af000    ..:.    BLX      0xebe392 ; 0xebe392
-        0x0000238c:    f0002035    5 ..    DCI      0xf0002035 ; ? Undefined
-        0x00002390:    2034fb37    7.4     EORSCS   pc,r4,r7,LSR r11 ; ?  
+        0x00002374:    f0002031    1 ..    DCI      0xf0002031 ; ? Undefined
+        0x00002378:    2030fb32    2.0     EORSCS   pc,r0,r2,LSR r11 ; ?  
+        0x0000237c:    fb2ff000    ../.    BLX      0xbfe386 ; 0xbfe386
+        0x00002380:    f000202f    / ..    DCI      0xf000202f ; ? Undefined
+        0x00002384:    202efb3d    =..     EORCS    pc,lr,sp,LSR r11 ; ?  
+        0x00002388:    fb29f000    ..).    BLX      0xa7e392 ; 0xa7e392
+        0x0000238c:    f000202d    - ..    DCI      0xf000202d ; ? Undefined
+        0x00002390:    202cfb37    7.,     EORCS    pc,r12,r7,LSR r11 ; ?  
         0x00002394:    fb23f000    ..#.    BLX      0x8fe39e ; 0x8fe39e
-        0x00002398:    f0002033    3 ..    DCI      0xf0002033 ; ? Undefined
-        0x0000239c:    2032fb20     .2     EORSCS   pc,r2,r0,LSR #22
-        0x000023a0:    fb2ef000    ....    BLX      0xbbe3aa ; 0xbbe3aa
+        0x00002398:    f000202b    + ..    DCI      0xf000202b ; ? Undefined
+        0x0000239c:    202afb20     .*     EORCS    pc,r10,r0,LSR #22
+        0x000023a0:    fb1df000    ....    BLX      0x77e3aa ; 0x77e3aa
         0x000023a4:    f0002024    $ ..    DCI      0xf0002024 ; ? Undefined
         0x000023a8:    4845fb1a    ..EH    STMDAMI  r5,{r1,r3,r4,r8,r9,r11-pc}^
         0x000023ac:    f0003009    .0..    DCI      0xf0003009 ; ? Undefined
